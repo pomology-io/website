@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --apple-red: #c53b28;
   --leaf-green: #2f7f56;
   --seed-brown: #3c281d;
@@ -259,6 +260,104 @@ h1 {
   h1,
   .lead {
     white-space: nowrap;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e7d8cb;
+    background:
+      radial-gradient(circle at 15% 14%, #8a3a00aa 0%, #8a3a0000 36%),
+      radial-gradient(circle at 85% 86%, #1f5f1f99 0%, #1f5f1f00 40%),
+      linear-gradient(145deg, #0f0a06 0%, #261406 52%, #12110c 100%);
+  }
+
+  .language-switch {
+    background: #2b1a0ed1;
+    border-color: #5b4024;
+  }
+
+  .lang-btn {
+    color: #bea78f;
+  }
+
+  .lang-btn.is-active {
+    background: #080707;
+    color: #d8c6b3;
+    box-shadow: 0 1px 8px -5px #000;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #2b160aeb 0%, #2f1408ef 100%);
+    border-color: #6a4726;
+    box-shadow:
+      0 24px 60px -40px #000,
+      inset 0 0 0 1px #fff1;
+  }
+
+  .kicker {
+    color: #67c39a;
+  }
+
+  h1 {
+    color: #e7d7c9;
+  }
+
+  .lead {
+    color: #dccdbf;
+  }
+
+  .contact-button,
+  .form-submit {
+    background: linear-gradient(140deg, #c44734 0%, #8f2f23 100%);
+    border-color: #a24332;
+    box-shadow:
+      0 10px 24px -16px #0008,
+      inset 0 1px 0 #ffffff40;
+  }
+
+  .meta {
+    color: #b8a99a;
+  }
+
+  .contact-backdrop {
+    background: rgba(8, 6, 4, 0.68);
+  }
+
+  .contact-panel {
+    border-color: #6a4726;
+    background: linear-gradient(160deg, #2b160a 0%, #31180a 100%);
+    box-shadow:
+      0 28px 60px -38px #000,
+      inset 0 0 0 1px #fff1;
+  }
+
+  .modal-close {
+    border-color: #6d4b28;
+    background: #2c1a0f;
+    color: #cdb8a2;
+  }
+
+  .contact-panel h2 {
+    color: #e7d7c9;
+  }
+
+  .contact-intro,
+  .field,
+  .form-status {
+    color: #cdbca9;
+  }
+
+  .field input,
+  .field textarea {
+    border-color: #70502f;
+    background: #23140b;
+    color: #ecdfd1;
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    outline-color: #c47460;
   }
 }
 
