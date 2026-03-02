@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomology B.V.</title>
+    <meta
+      name="description"
+      content="Consulting focused on Apple platforms in the IT, security, and developer ecosystems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="language-dock">
+      <div class="language-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="nl" aria-pressed="false">NL</button>
+      </div>
+    </div>
+
+    <main class="landing">
+      <div class="shell">
+        <div class="hero">
+          <p class="kicker" data-i18n="kicker">Pomology</p>
+          <h1 data-i18n="headline">Cultivate your Apple strategy.</h1>
+          <p class="lead" data-i18n="lead">
+            Experienced sales, product, and development consulting for Apple platform success.
+          </p>
+          <button type="button" class="contact-button" id="contact-open" data-i18n="contact">
+            Get in touch
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="meta">
+      <p data-i18n="address">Pomology B.V. · Joop Geesinkweg 501 · 1114AB Amsterdam-Duivendrecht · 🇳🇱</p>
+      <p data-i18n="legal">KVK: 90260392 · VAT: NL865258363B01</p>
+    </footer>
+
+    <div class="contact-modal" id="contact-modal" hidden>
+      <div class="contact-backdrop" data-close-modal></div>
+      <section class="contact-panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+        <button
+          type="button"
+          class="modal-close"
+          data-close-modal
+          aria-label="Close form"
+          data-i18n-aria-label="closeForm"
+        >
+          &times;
+        </button>
+        <h2 id="contact-title" data-i18n="formTitle">Get in touch</h2>
+        <p class="contact-intro" data-i18n="formIntro">Tell us a bit about your project and goals.</p>
+
+        <form id="contact-form" action="https://formspree.io/f/xnjbkqdr" method="POST">
+          <input type="hidden" name="_subject" value="Pomology website inquiry" />
+
+          <label class="field">
+            <span data-i18n="nameLabel">Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label class="field">
+            <span data-i18n="emailLabel">Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label class="field">
+            <span data-i18n="companyLabel">Company</span>
+            <input type="text" name="company" autocomplete="organization" />
+          </label>
+
+          <label class="field">
+            <span data-i18n="messageLabel">Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <button type="submit" class="form-submit" data-i18n="formSubmit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
