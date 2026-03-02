@@ -265,7 +265,7 @@ h1 {
 @media (max-width: 560px) {
   .landing {
     align-items: flex-start;
-    padding-top: 4.25rem;
+    padding-top: 5.25rem;
   }
 
   .hero {
